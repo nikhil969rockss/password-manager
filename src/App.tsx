@@ -49,19 +49,23 @@ const App = () => {
     setAllPasswords(allPasswords.filter((p: Password) => p.id !== id));
   };
   const handleDelete = (id: number) => {
-    console.log("deleting password" + id);
-    setAllPasswords(allPasswords.filter((p: Password) => p.id !== id));
-    toast.success("Password deleted", {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: false,
-          pauseOnHover: false,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-        });
-  };
+    let con = confirm("Are you sure you want to delete?")
+    if(con){
+
+      
+      setAllPasswords(allPasswords.filter((p: Password) => p.id !== id));
+      toast.success("Password deleted", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    };
+  }
 
   return (
     <context.Provider
@@ -75,14 +79,16 @@ const App = () => {
         handleDelete,
       }}
     >
-      <div className="">
+      <div className="min-h-screen relative">
         <Background />
 
         <Navbar />
-        <main className="mx-auto container ">
+        <main className="mx-auto container min-h-[80vh] ">
           <Inputs />
+          
         </main>
         <Footer/>
+        
       </div>
     </context.Provider>
   );

@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="fixed bottom-0 text-xs md:text-md w-full bg-green-800 text-[#eeeeee]">
+    <div className="absolute bottom-0 left-0 text-xs md:text-md w-full bg-green-800 text-[#eeeeee]">
       <p className="text-center font-[600] py-1 flex items-center justify-center tracking-tighter capitalize">
         Made with{" "}
         <span
