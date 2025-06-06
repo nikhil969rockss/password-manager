@@ -7,12 +7,19 @@ const Navbar = () => {
         <span className="bg-green-400 px-2 py-1 rounded-tl-md rounded-bl-md ">
           Pass
         </span>{" "}
-        <span><MdOutlineKey/></span>
+        <span>
+          <MdOutlineKey />
+        </span>
         <span className="bg-black text-white py-1  rounded-tr-md rounded-br-md px-2">
           Key
         </span>
       </div>
-      <a title="contribute to github" className="cursor-pointer text-3xl">
+      <a
+        href="https://github.com/nikhil969rockss/password-manager"
+        target="_blank"
+        title="contribute to github"
+        className="cursor-pointer text-3xl"
+      >
         <IoLogoGithub />
       </a>
     </nav>
