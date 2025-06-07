@@ -112,7 +112,7 @@ const PasswordsList = () => {
                 <div className="flex-1 flex  justify-center md:gap-2 ">
                   <div className=" md:w-1/2 flex flex-col  items-center  justify-center md:justify-around md:flex-row   ">
                     <div className="flex items-center gap-2">
-                      <p className="  flex outline-none ">{item.password}</p>
+                      <p className="  flex outline-none ">{"*".repeat(item.password.length)}</p>
                       <span
                         className="cursor-pointer"
                         onClick={() => handleCopy(item.password)}
